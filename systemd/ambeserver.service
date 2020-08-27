@@ -1,0 +1,18 @@
+[Unit]
+Description=AMBEServer Service
+# Description=Place this file in /lib/systemd/system
+# Description=N4IRS 04/20/2018
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+StandardOutput=null
+WorkingDirectory=/opt/AMBEServer
+ExecStart=/opt//AMBEServer/AMBEserver -s 460800 -p 2460 -i /dev/ttyUSB0 
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+
+[Install]
+
+WantedBy=multi-user.target

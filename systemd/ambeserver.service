@@ -9,7 +9,7 @@ Restart=always
 RestartSec=3
 StandardOutput=null
 WorkingDirectory=/opt/AMBEServer
-ExecStart=/opt//AMBEServer/AMBEserver -s 460800 -p 2460 -i /dev/ttyUSB0 
+ExecStart=/opt/AMBEServer/AMBEserver -s 460800 -p 2460 -i /dev/ttyUSB0 
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
 
